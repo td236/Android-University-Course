@@ -17,3 +17,5 @@ RUN curl -s "https://get.sdkman.io" | bash
 RUN chmod a+x "$HOME/.sdkman/bin/sdkman-init.sh"
 RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk install kotlin"
 RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk install gradle 7.2"
+
+# https://hub.docker.com/repository/docker/tdadela/android#

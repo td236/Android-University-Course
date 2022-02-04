@@ -5,6 +5,9 @@ import org.jetbrains.exposed.sql.Table
 
 
 data class User(val id: Int, val login: String, val password: String)
+{
+    constructor() : this(0, "", "")
+}
 object Users : Table() {
     val id: Column<Int> = integer("id").autoIncrement()
     val login: Column<String> = varchar("login", 255)

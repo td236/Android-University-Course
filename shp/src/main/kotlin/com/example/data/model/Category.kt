@@ -7,10 +7,12 @@ data class Category(
     val id: Int,
     val desc: String
     )
-
+{
+    constructor() : this(0, "")
+}
 object Categories: Table() {
     val id: Column<Int> = integer("id").autoIncrement()
-    val desc: Column<String> = varchar("login", 255)
+    val desc: Column<String> = varchar("desc", 255)
 
     override val primaryKey = PrimaryKey(id, name="PK_Category_ID")
 
